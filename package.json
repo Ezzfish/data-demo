@@ -1,6 +1,7 @@
 {
-  "name": "express",
+  "name": "data-demo",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +16,7 @@
     "url": "https://github.com/Ezzfish/express/issues"
   },
   "homepage": "https://github.com/Ezzfish/express#readme",
-  "description": ""
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
