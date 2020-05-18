@@ -39,3 +39,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+//express 生成node服务器
+
+//Mock.js 生成随机数据
+
+//axios 从网页上收数据
