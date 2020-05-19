@@ -1,10 +1,15 @@
-var express=require('express')
-var Mock=require('mockjs')
+var express = require('express')
+var Mock = require('mockjs')
 
-var app=express()
+var app = express()
 
-app.all('/test.action',function(req,res){
-    res.send('hello World')
+app.all('/', function (req, res) {
+    res.json(Mock.mock({
+        "data|12":[{
+            "month|+1":1,
+            "value|0-500":20
+        }]
+    }))
 })
 
 app.listen('8000')
