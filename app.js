@@ -12,22 +12,16 @@ app.all('*', function (req, res, next) {
     next()
 })  
 
-app.all('/', function (req, res) {
+app.all('/BlockTwoChart', function (req, res) {
     res.json(
-        123
-        
-        /*
         Mock.mock({
         "data|12":[{
             "month|+1":1,
-            "value|0-500":20
+            "value|0-200":20
             }]
         })
-        */
-    
     )
 })
-
 
 
 
