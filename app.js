@@ -106,4 +106,48 @@ app.get('/BlockThreeTable', function (req, res) {
     )
 })
 
+app.get('/BlockThreeChartTwo', function (req, res) {
+    var name = ['家用电器', '食用酒水', '个户健康', '服饰箱包', '母婴用品', '其他']
+    res.json(
+        Mock.mock({
+            "data|3-6": [{
+                'name|1':name,
+                "value|1-100": 1,
+            }],
+            "value|10000-100000":1
+        })
+    )
+})
+app.get('/BlockFour', function (req, res) {
+    res.json(
+        Mock.mock({
+            "array|8-8": [
+                {
+                    "number|1-100": 1
+                }
+            ]
+        }).array.map(obj => obj.number)
+    )
+})
+app.get('/BlockFourContent', function (req, res) {
+    res.json(
+        Mock.mock({
+            "array|19-19": [
+                {
+                    name:'passenge',
+                    'time|+1':1,
+                    "value|1-119": 1
+                }
+            ],
+            "arraypayment|19-19": [
+                {
+                    name: 'payment',
+                    'time|+1': 1,
+                    "value|1-119": 1
+                }
+            ]
+        })
+    )
+})
+
 var server = app.listen('8000')
